@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
-get '/students/:id' => 'students#show'
-
+  get '/students' => 'students#index'
+  get '/students/:id' => 'students#show'
 end
