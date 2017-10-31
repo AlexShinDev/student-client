@@ -1,3 +1,133 @@
-<% @students.each do |student| %>
-  <h2><%= student.first_name %></h2>
-<% end %>
+<div class="col-xs-12 col-sm-8 col-md-9 content-column">
+  <div class="small-navbar visible-xs">
+    <button type="button" data-toggle="offcanvas" class="btn btn-ghost pull-left"> <i class="fa fa-align-left"> </i>Menu</button>
+    <h1 class="small-navbar-heading"> <a href="index.html">Creative </a></h1>
+  </div>
+  <div class="grid">
+    <div class="row">
+      <% @students.each do |student| %>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item"> 
+        <div class="box-masonry"><a href="detail.html" title="" class="box-masonry-image with-hover-overlay with-hover-icon"><img src="https://i.pinimg.com/736x/1f/52/cf/1f52cfb100077212725f823fb225e472--banana-art-funny-food.jpg" alt="" class="img-responsive"></a>
+          <div class="box-masonry-hover-text-header"> 
+            <h4><a href="detail.html">Capstone Title</a></h4>
+          </div>
+          <div class="box-masonry-text">
+            <h4> <a href="detail.html"></a><%= student.first_name %></h4>
+          </div>
+        </div>
+      </div>
+      <% end %>
+  <!--
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item"> 
+        <div class="box-masonry"><a href="detail.html" title="" class="box-masonry-image with-hover-overlay"><img src="https://i.pinimg.com/736x/1f/52/cf/1f52cfb100077212725f823fb225e472--banana-art-funny-food.jpg" alt="" class="img-responsive"></a>
+          <div class="box-masonry-hover-text-header"> 
+            <h4> <a href="detail.html">Name of the work 1</a></h4>
+            <div class="box-masonry-desription">
+              <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life. One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item"> 
+        <div class="box-masonry"><a href="detail.html" title="" class="box-masonry-image with-hover-overlay with-hover-icon"><img src="https://i.pinimg.com/736x/1f/52/cf/1f52cfb100077212725f823fb225e472--banana-art-funny-food.jpg" alt="" class="img-responsive"></a>
+          <div class="box-masonry-hover-text-header"> 
+            <h4><a href="detail.html">Capstone Title</a></h4>
+          </div>
+          <div class="box-masonry-text">
+            <h4> <a href="detail.html"></a>Student Name</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item"> 
+        <div class="box-masonry"><a href="detail.html" title="" class="box-masonry-image with-hover-overlay with-hover-icon"><img src="https://i.pinimg.com/736x/1f/52/cf/1f52cfb100077212725f823fb225e472--banana-art-funny-food.jpg" alt="" class="img-responsive"></a>
+          <div class="box-masonry-text">
+            <h4> <a href="detail.html">OH SOMEWHERE ONLINE HAHA. IT JUST CRACKED ME UP! THANKS FOR JOIN US TONIGHT BILL</a></h4>
+            <div class="box-masonry-desription">
+              <p>Fifth abundantly made Give sixth hath. Cattle creature i be don't them.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item"> 
+        <div class="box-masonry">
+          <div class="box-masonry-text">
+            <h4> <a href="https://i.pinimg.com/736x/1f/52/cf/1f52cfb100077212725f823fb225e472--banana-art-funny-food.jpg">2)I REALLY, REALLY, REALLY LIKE THIS IMAGE</a></h4>
+            <div class="box-masonry-desription">
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.  A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item"> 
+        <div class="box-masonry"><a href="detail.html" title="" class="box-masonry-image with-hover-overlay"><img src="https://i.pinimg.com/736x/1f/52/cf/1f52cfb100077212725f823fb225e472--banana-art-funny-food.jpg" alt="" class="img-responsive"></a>
+          <div class="box-masonry-hover-text-header"> 
+            <h4> <a href="detail.html">3) ME TOO! SAVE IT, IT'S ALL YOURS MY FRIEND</a></h4>
+            <div class="box-masonry-desription">
+              <p>Fifth abundantly made Give sixth hath. Cattle creature i be don't them.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item"> 
+        <div class="box-masonry">
+          <div class="box-masonry-text">
+            <h4> <a href="detail.html">4)HAHAHA,GREAT PIC</a></h4>
+            <div class="box-masonry-desription">
+              <p>Fifth abundantly made Give sixth hath. Cattle creature i be don't them.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item"> 
+        <div class="box-masonry"><a href="detail.html" title="" class="box-masonry-image with-hover-overlay with-hover-icon"><img src="https://i.pinimg.com/736x/1f/52/cf/1f52cfb100077212725f823fb225e472--banana-art-funny-food.jpg" alt="" class="img-responsive"></a>
+          <div class="box-masonry-text">
+            <h4> <a href="detail.html">5)THANKS LORY</a></h4>
+            <div class="box-masonry-desription">
+              <p>Fifth abundantly made Give sixth hath. Cattle creature i be don't them.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item"> 
+        <div class="box-masonry"><a href="detail.html" title="" class="box-masonry-image with-hover-overlay with-hover-icon"><img src="https://i.pinimg.com/736x/1f/52/cf/1f52cfb100077212725f823fb225e472--banana-art-funny-food.jpg" alt="" class="img-responsive"></a>
+          <div class="box-masonry-text">
+            <h4> <a href="detail.html">Name of the work 8</a></h4>
+            <div class="box-masonry-desription">
+              <p>Fifth abundantly made Give sixth hath. Cattle creature i be don't them.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item"> 
+        <div class="box-masonry"><a href="detail.html" title="" class="box-masonry-image with-hover-overlay with-hover-icon"><img src="https://i.pinimg.com/736x/1f/52/cf/1f52cfb100077212725f823fb225e472--banana-art-funny-food.jpg" alt="" class="img-responsive"></a>
+          <div class="box-masonry-text">
+            <h4> <a href="detail.html">Item with image</a></h4>
+            <div class="box-masonry-desription">
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.  A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item"> 
+        <div class="box-masonry"><a href="detail.html" title="" class="box-masonry-image with-hover-overlay"><img src="https://i.pinimg.com/736x/1f/52/cf/1f52cfb100077212725f823fb225e472--banana-art-funny-food.jpg" alt="" class="img-responsive"></a>
+          <div class="box-masonry-hover-text-header"> 
+            <h4> <a href="detail.html">Item with image</a></h4>
+            <div class="box-masonry-desription">
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.  A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item"> 
+        <div class="box-masonry"><a href="detail.html" title="" class="box-masonry-image with-hover-overlay"><img src="https://i.pinimg.com/736x/1f/52/cf/1f52cfb100077212725f823fb225e472--banana-art-funny-food.jpg" alt="" class="img-responsive"></a>
+          <div class="box-masonry-hover-text-header"> 
+            <h4> <a href="detail.html">Item with image</a></h4>
+            <div class="box-masonry-desription">
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.  A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div> -->
+    </div>
+</div>
