@@ -1,5 +1,6 @@
 class Student
   attr_accessor :first_name
+
   def initialize(options_hash)
     @first_name = options_hash[:first_name]
   end
@@ -22,5 +23,13 @@ class Student
       students << Student.new(student_hash)
     end
     students
+  end
+
+  def self.find(student_id)
+    Student.new( { 
+                  "first_name": "Sam",
+                  "last_name": "Lorimer",
+                  "id": student_id
+                  })
   end
 end
