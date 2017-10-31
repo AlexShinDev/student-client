@@ -26,10 +26,6 @@ class Student
   end
 
   def self.find(student_id)
-    Student.new( { 
-                  "first_name": "Sam",
-                  "last_name": "Lorimer",
-                  "id": student_id
-                  })
+    Student.new(Unirest.get("https://crypto-currents-squidshack.herokuapp.com/api/v1/students/#{ student_id }.json").body)
   end
 end
