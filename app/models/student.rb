@@ -1,5 +1,6 @@
 class Student
   attr_accessor :id, :first_name, :last_name, :screenshot, :capstones, :description, :name
+      HEADERS = {'X-User-Email' => ENV['api_email'], 'Authorization' => "Token token=#{ENV['api_key']}", "Accept" => "application/json" }
 
   def initialize(options_hash)
     @id = options_hash["id"]
@@ -11,14 +12,20 @@ class Student
     @description = options_hash["capstones"][0]["description"]
   end
 
-  def capstones
-
+  def random_quote
+    random_quote = [
+                    "Sometimes, I just want to gently caress Josh's beard... ~ Cyrus",
+                    "Deep in my soul, I just wanted to a pirate. Arg ~ Josh",
+                    "I want to mix it up and get Tacos today ~ Jaque"
+                    ]
+    random_quote = random_quote.shuffle.first
   end
 
   def self.all 
     students = []
     response = Unirest.get(
                           "https://crypto-currents-squidshack.herokuapp.com/api/v1/students.json",
+                          headers: HEADERS
                           ).body
     response.each do |student_hash|
       students << student = Student.new(student_hash)
@@ -27,6 +34,8 @@ class Student
   end
 
   def self.find(student_id)
-    Student.new(Unirest.get("https://crypto-currents-squidshack.herokuapp.com/api/v1/students/#{ student_id }.json").body)
+    Student.new(Unirest.get("https://crypto-currents-squidshack.herokuapp.com/api/v1/students/#{ student_id }.json",
+      headers: HEADERS
+      ).body)
   end
 end
