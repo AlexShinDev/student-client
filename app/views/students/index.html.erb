@@ -7,12 +7,12 @@
     <div class="row">
       <% @students.each do |student| %>
         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item"> 
-        <div class="box-masonry"><a href="detail.html" title="" class="box-masonry-image with-hover-overlay with-hover-icon"><img src="https://i.pinimg.com/736x/1f/52/cf/1f52cfb100077212725f823fb225e472--banana-art-funny-food.jpg" alt="" class="img-responsive"></a>
+        <div class="box-masonry"><a href="/students/<%= student.id %>" title="" class="box-masonry-image with-hover-overlay with-hover-icon"><img src="<%= student.screenshot %>" alt="" class="img-responsive"></a>
           <div class="box-masonry-hover-text-header"> 
-            <h4><a href="detail.html">Capstone Title</a></h4>
+            <h4><a href="/students/<%= student.id %>"><%= student.name %></a></h4>
           </div>
           <div class="box-masonry-text">
-            <h4> <a href="detail.html"></a><%= student.first_name %></h4>
+            <h4> <a href="/students/<%= student.id %>"></a><%= student.first_name %></h4>
           </div>
         </div>
       </div>
