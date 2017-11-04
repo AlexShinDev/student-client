@@ -12,15 +12,6 @@ class Student
     @description = options_hash["capstones"][0]["description"]
   end
 
-  def random_quote
-    random_quote = [
-                    "Sometimes, I just want to gently caress Josh's beard... ~ Cyrus",
-                    "Deep in my soul, I just wanted to a pirate. Arg ~ Josh",
-                    "I want to mix it up and get Tacos today ~ Jaque"
-                    ]
-    random_quote = random_quote.shuffle.first
-  end
-
   def self.all 
     students = []
     response = Unirest.get(
